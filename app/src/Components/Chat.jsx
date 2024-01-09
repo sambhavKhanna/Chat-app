@@ -5,6 +5,7 @@ import { Contacts } from './Contacts'
 import { useParams } from 'react-router-dom'
 import { RoomContext } from '../context'
 import { socket } from '../socket'
+import { BASE_URL } from '../constants'
 
 export const Chat = () => {
 
@@ -17,7 +18,7 @@ export const Chat = () => {
     useEffect(() => {
 
         (async () => {
-            const responseRooms = await fetch('http://localhost:3000/rooms', {
+            const responseRooms = await fetch(BASE_URL + '/rooms', {
                 method: 'POST',
                 headers: {
                     'Content-type' : 'application/json'

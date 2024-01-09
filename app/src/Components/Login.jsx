@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate } from 'react-router-dom'
 import { Button, TextField, Typography } from "@mui/material"
+import { BASE_URL } from "../constants"
 
 export const Login = () => {
 
@@ -9,7 +10,7 @@ export const Login = () => {
     const navigate = useNavigate()
 
     const join = async () => {
-        const res = await fetch('http://localhost:3000/user', {
+        const res = await fetch(BASE_URL + '/user', {
             method: 'POST',
             headers: {
                 'Content-type' : 'application/json'
@@ -29,7 +30,7 @@ export const Login = () => {
     }
 
     const login = async () => {
-        const res = await fetch(`http://localhost:3000/user?email=${email}&password=${password}`, {
+        const res = await fetch(BASE_URL + `/user?email=${email}&password=${password}`, {
             method: 'GET',
             headers: {
                 'Content-type' : 'application/json'

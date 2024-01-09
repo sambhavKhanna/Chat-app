@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 import { RoomContext, NewContactContext } from "../context"
 import { useContext } from "react"
+import { BASE_URL } from "../constants"
 
 export const Contacts = () => {
 
@@ -61,7 +62,7 @@ export const Contacts = () => {
 
         (async () => {
 
-            const responseNewContacts = await fetch(`http://localhost:3000/newContacts?email=${email}`, {
+            const responseNewContacts = await fetch(BASE_URL + `/newContacts?email=${email}`, {
                 method: 'GET',
                 headers: {
                     'Content-type' : 'application/json'
