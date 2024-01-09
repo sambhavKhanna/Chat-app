@@ -43,7 +43,6 @@ io.on('connection', (socket) => {
     console.log('User Connected:', socket.id)
 
     socket.on('send', (sender, message, roomId) => {
-        console.log('INSIDE SEND')
 
         ROOMS.find(room => room.roomId === roomId).chats.push({ sender, message });
 
@@ -56,7 +55,6 @@ io.on('connection', (socket) => {
 
         ROOMS.push({ roomId, people: [sender, newContact], chats: [] })
 
-        console.log(socket.rooms)
         io.emit('add contact', sender, newContact, roomId)
     })
 
@@ -64,7 +62,6 @@ io.on('connection', (socket) => {
 
         socket.join(roomId)
 
-        console.log(socket.rooms)
     })
 
     socket.on('re-join rooms', (rooms) => {
