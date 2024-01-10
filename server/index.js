@@ -6,7 +6,14 @@ const { Server } = require('socket.io')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-app.use(cors())
+app.use(cors(
+    {
+        origin: ['https://chat-app-ruddy-kappa.vercel.app/'],
+        methods: ['POST', 'GET'],
+        credentials: true
+    }
+))
+
 app.use(bodyParser.json())
 
 
