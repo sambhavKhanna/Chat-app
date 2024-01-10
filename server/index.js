@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 app.use(cors(
     {
         origin: ['https://chat-app-ruddy-kappa.vercel.app'],
-        methods: ['POST', 'GET'],
+        methods: ['GET', 'POST'],
         credentials: true
     }
 ))
@@ -41,7 +41,7 @@ const httpServer = http.createServer(app)
 const io = new Server(httpServer, {
     path: '/socket.io',
     cors: {
-        origin: ['http://localhost:5173'],
+        origin: ['https://chat-app-ruddy-kappa.vercel.app'],
         methods: ['GET', 'POST']
     }
 })
