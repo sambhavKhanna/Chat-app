@@ -8,7 +8,7 @@ const bodyParser = require('body-parser')
 
 app.use(cors(
     {
-        origin: ['https://chat-app-ruddy-kappa.vercel.app/'],
+        origin: ['https://chat-app-ruddy-kappa.vercel.app'],
         methods: ['POST', 'GET'],
         credentials: true
     }
