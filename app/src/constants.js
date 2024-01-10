@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://chat-app-u2hn.vercel.app' //'https://chat-app-u2hn.vercel.app/'
+export const BASE_URL = 'https://chat-app-u2hn-84694glnm-sambhavkhannas-projects.vercel.app' //'https://chat-app-u2hn.vercel.app/'
