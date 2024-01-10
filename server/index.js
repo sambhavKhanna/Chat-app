@@ -42,7 +42,8 @@ const io = new Server(httpServer, {
     path: '/socket.io',
     cors: {
         origin: ['https://chat-app-ruddy-kappa.vercel.app'],
-        methods: ['GET', 'POST']
+        methods: ['GET', 'POST'],
+        credentials: true
     }
 })
 
