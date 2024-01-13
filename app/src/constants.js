@@ -1,1 +1,1 @@
-export const BASE_URL =  'https://chat-app-u2hn.vercel.app' // 'http://localhost:3000'
+export const BASE_URL = 'https://chat-app-u2hn.vercel.app' // 'http://localhost:3000'
