@@ -1,7 +1,5 @@
 # Real-Time Chat Web Application
 
-![Project Logo/Preview Image - Optional](link_to_your_image.png)
-
 ## Table of Contents
 
 - [About](#about)
