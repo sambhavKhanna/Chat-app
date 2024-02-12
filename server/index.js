@@ -14,7 +14,7 @@ mongoose.connect(dbConnectionString)
 
 app.use(cors(
     {
-        origin: ['https://chat-app-ruddy-kappa.vercel.app'],
+        origin: [process.env.FRONTEND_URL],
         methods: ['GET', 'POST'],
         credentials: true
     }
@@ -32,7 +32,7 @@ const httpServer = http.createServer(app)
 const io = new Server(httpServer, {
     path: '/socket.io',
     cors: {
-        origin: ['https://chat-app-ruddy-kappa.vercel.app'], // 'http://localhost:5173'
+        origin: [process.env.FRONTEND_URL], // 'http://localhost:5173'
         methods: ['GET', 'POST'],
         credentials: true
     }
