@@ -28,7 +28,5 @@ This is a real-time full-stack chat web application built using React for the fr
   - Express
   - Socket.io for WebSocket communication
   - MongoDB for data storage
- 
-- **Deployment:**
-  - Deployed on Vercel, but will shortly be moved to AWS
+
 
